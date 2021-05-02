@@ -74,6 +74,7 @@ public class MyLinkedList<T>  {
         INode tempNode = head;
         while (!tempNode.getNext().equals(tail)) {
             tempNode = tempNode.getNext();
+            size--;
         }
         this.tail = tempNode;
         tempNode.setNext(null);
@@ -113,8 +114,8 @@ public class MyLinkedList<T>  {
     }
 
     //size() will display size of the linked list
-    public void size() {
-        System.out.println(size);
+    public int size() {
+        return size;
     }
 
     //sortList() will sort nodes of the list in ascending order
@@ -122,7 +123,7 @@ public class MyLinkedList<T>  {
         //Node current will point to head
         //Node index will point to next of head
         INode<K> current = (INode<K>) head, index;
-        K temp = null;
+        K temp ;
         if (head == null) {
             return;
         } else {
