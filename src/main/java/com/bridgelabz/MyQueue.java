@@ -19,4 +19,9 @@ public class MyQueue {
         }
         myLinkedList.printMyNodes();
     }
+
+    //dequeue() Delete Nodes of Queue using pophead method of Linked List
+    public void dequeue() {
+        myLinkedList.popHead();
+    }
 }
